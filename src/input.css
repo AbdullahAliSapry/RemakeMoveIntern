@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+.navbar li a::after {
+  @apply content-[''] absolute bg-mainColor w-0 h-[3px] left-0 -bottom-1 transition-all duration-300 ease-linear;
+}
+
+.navbar a:hover::after,
+.navbar .home-active::after {
+  @apply w-full;
+}
+
+
+
+@layer components {
+  .custom-btn {
+    @apply bg-mainColor p-[.7rem_1.4rem] rounded-md transition-all duration-300;
+  }
+  .custom-btn:hover {
+    @apply bg-[#b52022];
+  }
+  .heading {
+    @apply text-[1.2rem] font-medium uppercase border-b border-mainColor max-w-[1000px] mx-auto;
+  }
+  .custom-container {
+    @apply max-w-[1000px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(180px,auto))] gap-4 mt-8;
+  }
+  .box-img {
+    @apply w-full h-[270px] overflow-hidden;
+  }
+
+  .box-img img {
+    @apply w-full h-full object-cover cursor-pointer transition-transform duration-200 ease-linear hover:-translate-y-2;
+  }
+  .box-title {
+    @apply text-[0.9rem] font-medium text-mainColor mt-2;
+  }
+  .box-text {
+    @apply text-[13px];
+  }
+
+  .logo {
+    @apply text-[1.1rem] font-[600] flex items-center gap-[.5rem];
+  }
+  .logo i {
+    @apply text-2xl;
+  }
+  .social-icons {
+    @apply flex items-center gap-[.5rem];
+  }
+  .social-icons a {
+    @apply w-[55px] h-[55px] rounded-full text-[2rem] text-center leading-[55px] bg-bgColor text-mainColor border-[4px] border-[rgba(2,3,7,0.4)] transition-all duration-200 ease-linear;
+  }
+  .social-icons a:hover {
+    @apply bg-mainColor text-bgColor;
+  }
+}

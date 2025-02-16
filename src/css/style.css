@@ -1,0 +1,120 @@
+
+
+
+:root {
+  --main-color:#ff2c1f;
+  --text-color:#020307;
+  --bg-color:#fff;
+}
+
+section {
+  padding: 4.5rem 1.5rem;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--text-color);
+  color: var(--bg-color);
+}
+
+
+/* Resbonsive */
+@media (max-width:1080px) {
+  .home-text {
+    padding: 0 100px;
+  }
+}
+@media (max-width:991px) {
+  header {
+    padding: 18px 4%;
+  }
+  section{
+    padding: 50px 4%;
+  }
+  .home-text {
+    padding: 0 4%;
+  }
+  .home-text h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width:774px) {
+  header {
+    padding: 12px 4%;
+  }
+  #menu-icon {
+    display: initial;
+    color: var(--bg-color);
+  }
+  header.shadow #menu-icon {
+    color: var(--text-color);
+  }
+  .navbar {
+    position: absolute;
+    top: -578px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    row-gap: 1.4rem;
+    padding: 20px;
+    box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
+    text-align: center;
+  }
+  .navbar a {
+    color: var(--text-color);
+    transition: 0.3s all linear;
+  }
+  .navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+  }
+  .navbar a::after {
+    display: none;
+  }
+  .navbar.active {
+    top: 100%;
+  }
+  .home-text h2 {
+    font-size: 2.4rem;
+  }
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+  .movies-container,
+  .coming-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px ,auto));
+  }
+}
+@media (max-width: 472px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+  .news form  .email {
+    display: none;
+  }
+}
+@media (max-width: 370px) {
+  header {
+    padding: 6px 4%;
+  }
+  .home-text h2 {
+    font-size: 1.7rem;
+  }
+  .movies-container,
+  .coming-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px ,auto));
+  }
+  .box .box-img img {
+    height: 240px;
+  }
+}
+@media (max-width: 300px) {
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Resbonsive */
